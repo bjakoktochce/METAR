@@ -8,6 +8,8 @@
         Title="MainWindow" Height="28" Width="1920" ResizeMode="NoResize" ShowInTaskbar="False" WindowStyle="None" Topmost="True" Background="#FF101010">
     <Window.ContextMenu>
         <ContextMenu Name="ContextMenu">
+            <MenuItem Header="Download latest" Name="ContextMenuUpdate" Click="ContextMenuUpdate_Click" />
+            <Separator />
             <MenuItem Header="Options" Name="ContextMenuOptions" Click="ContextMenuOptions_Click" />
             <MenuItem Header="About" Name="ContextMenuAbout" Click="ContextMenuAbout_Click" />
             <Separator />
@@ -15,7 +17,7 @@
         </ContextMenu>
     </Window.ContextMenu>
 
-    <Label x:Name="MetarText" Content="METAR STRIP: Connecting..." HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Foreground="#FFBFBFBF"/>
+    <Label x:Name="MetarText" Content="METAR Stripe: Connecting..." HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Foreground="#FFBFBFBF"/>
 
 </Window>
 

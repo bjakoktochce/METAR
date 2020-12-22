@@ -1,12 +1,20 @@
-﻿<Window x:Class="Metar_Strip.OptionsWindow"
+﻿<Window x:Name="OptionsWindow1" x:Class="Metar_Strip.OptionsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Metar_Strip"
         mc:Ignorable="d"
-        Title="OptionsWindow" Height="450" Width="800">
+        Title="Options" Height="450" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="75px" />
+        </Grid.RowDefinitions>
+        <Button x:Name="OKButton" Content="OK" HorizontalAlignment="Left" Margin="157,0,0,0" VerticalAlignment="Center" Width="100" Click="OKButton_Click" Grid.Row="2" />
+        <Label Content="ICAO Airport designator:" HorizontalAlignment="Left" Margin="40,74,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="Show TAF message" HorizontalAlignment="Left" Margin="40,310,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="185,78,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
     </Grid>
 </Window>

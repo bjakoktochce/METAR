@@ -23,6 +23,8 @@ namespace Metar_Strip
    
     public partial class MainWindow : Window
     {
+        private static Timer aTimer;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -34,10 +36,22 @@ namespace Metar_Strip
 
 
             //ColorGray = "#FF302D2D";
-            
-
-
             this.MetarText.Content = Metar.GetCurrentMetar();
+
+            aTimer = new System.Timers.Timer(1000 * 60 * 5);
+            aTimer.Enabled = true;
+            aTimer.Elapsed += OnTimedEvent;
+            //aTimer += new EventHandler(Timer1_Tick);
+
+        }
+
+        private void OnTimedEvent(Object source, ElapsedEventArgs e)
+        {
+            this.Dispatcher.Invoke(() =>
+            {
+                this.MetarText.Content = Metar.GetCurrentMetar();
+            });
+            
         }
 
         private void ContextMenuExit_Click(object sender, RoutedEventArgs e)
@@ -55,6 +69,11 @@ namespace Metar_Strip
         {
             AboutWindow aboutWindow = new AboutWindow();
             aboutWindow.Show();
+        }
+
+        private void ContextMenuUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            this.MetarText.Content = Metar.GetCurrentMetar();
         }
     }
 }

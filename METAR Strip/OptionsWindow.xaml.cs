@@ -21,5 +21,10 @@ namespace Metar_Strip
         {
             InitializeComponent();
         }
+
+        private void OKButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

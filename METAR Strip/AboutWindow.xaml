@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="AboutWindow" Height="400" Width="400" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="OkButton" Content="OK" HorizontalAlignment="Center" Margin="0,363,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.504,0.594" Click="OkButton_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="75px" />
+        </Grid.RowDefinitions>
+        <Button x:Name="OkButton" Content="OK" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="100" RenderTransformOrigin="0.504,0.594" Click="OkButton_Click" Grid.Row="2"/>
         <Label Content="METAR Strip" HorizontalAlignment="Center" Margin="0,56,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Normal" FontFamily="Arial"/>
         <Label Content="by Bartosz B. Jakoktochce" HorizontalAlignment="Left" Margin="57,112,0,0" VerticalAlignment="Top"/>
 
