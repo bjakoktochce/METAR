@@ -36,22 +36,27 @@ namespace Metar_Strip
 
 
             //ColorGray = "#FF302D2D";
-            this.MetarText.Content = Metar.GetCurrentMetar();
+            //this.MetarText.Content = Metar.GetCurrentMetar();
+            //this.Status.Content = this.Status.Content = "Last updated: " + DateTime.Now.ToString();
+            Update();
 
             aTimer = new System.Timers.Timer(1000 * 60 * 5);
             aTimer.Enabled = true;
             aTimer.Elapsed += OnTimedEvent;
-            //aTimer += new EventHandler(Timer1_Tick);
+        }
 
+        private void Update()
+        {
+            this.MetarText.Content = Metar.GetCurrentMetar();
+            this.Status.Content = "Last updated: " + DateTime.Now.ToString();
         }
 
         private void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
             this.Dispatcher.Invoke(() =>
             {
-                this.MetarText.Content = Metar.GetCurrentMetar();
+                Update();
             });
-            
         }
 
         private void ContextMenuExit_Click(object sender, RoutedEventArgs e)
@@ -73,7 +78,7 @@ namespace Metar_Strip
 
         private void ContextMenuUpdate_Click(object sender, RoutedEventArgs e)
         {
-            this.MetarText.Content = Metar.GetCurrentMetar();
+            Update();
         }
     }
 }

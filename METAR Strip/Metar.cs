@@ -24,8 +24,7 @@ namespace Metar_Strip
             return t.InnerText;
 
             
-            //Connect();
-            //return "METAR EPKT 210230Z 14006KT 3900 BR FEW005 SCT008 OVC022 M01 / M01 Q1026=";
+           
         }
 
         
