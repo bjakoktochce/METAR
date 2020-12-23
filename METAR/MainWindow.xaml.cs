@@ -30,6 +30,7 @@ namespace METAR
             InitializeComponent();
             Application.Current.MainWindow.Height = 28;
             Application.Current.MainWindow.Width = SystemParameters.PrimaryScreenWidth;
+            Metar.ICAOAirportCode = "EPKT";
 
             Left = System.Windows.SystemParameters.WorkArea.Width - Width;
             Top = System.Windows.SystemParameters.WorkArea.Height - 28;
@@ -79,6 +80,12 @@ namespace METAR
         private void ContextMenuUpdate_Click(object sender, RoutedEventArgs e)
         {
             Update();
+        }
+
+        private void ContextMenuAirport_Click(object sender, RoutedEventArgs e)
+        {
+            AirportWindow airportWindow = new AirportWindow();
+            airportWindow.Show();
         }
     }
 }

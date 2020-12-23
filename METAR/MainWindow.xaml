@@ -9,6 +9,7 @@
     <Window.ContextMenu>
         <ContextMenu Name="ContextMenu">
             <MenuItem Header="Download latest" Name="ContextMenuUpdate" Click="ContextMenuUpdate_Click" />
+            <MenuItem Header="Airport..." Name="ContextMenuAirport" Click="ContextMenuAirport_Click" />
             <Separator />
             <MenuItem Header="Options" Name="ContextMenuOptions" Click="ContextMenuOptions_Click" />
             <MenuItem Header="About" Name="ContextMenuAbout" Click="ContextMenuAbout_Click" />

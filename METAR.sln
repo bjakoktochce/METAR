@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "METAR", "Metar Strip\METAR.csproj", "{1EE6AD17-72AE-4823-8FCC-4F487BD11192}"
-EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "METAR Installer", "METAR Setup\METAR Setup.vdproj", "{334CC062-5031-42C3-A363-1E43F78BE4C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "METAR", "METAR\METAR.csproj", "{7791C941-3626-4C6E-9BB4-187BE9D6CCCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,20 +15,20 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1EE6AD17-72AE-4823-8FCC-4F487BD11192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1EE6AD17-72AE-4823-8FCC-4F487BD11192}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1EE6AD17-72AE-4823-8FCC-4F487BD11192}.Debug|x64.ActiveCfg = Debug|x64
-		{1EE6AD17-72AE-4823-8FCC-4F487BD11192}.Debug|x64.Build.0 = Debug|x64
-		{1EE6AD17-72AE-4823-8FCC-4F487BD11192}.Release|Any CPU.ActiveCfg = Release|x64
-		{1EE6AD17-72AE-4823-8FCC-4F487BD11192}.Release|Any CPU.Build.0 = Release|x64
-		{1EE6AD17-72AE-4823-8FCC-4F487BD11192}.Release|x64.ActiveCfg = Release|x64
-		{1EE6AD17-72AE-4823-8FCC-4F487BD11192}.Release|x64.Build.0 = Release|x64
 		{334CC062-5031-42C3-A363-1E43F78BE4C3}.Debug|Any CPU.ActiveCfg = Debug
 		{334CC062-5031-42C3-A363-1E43F78BE4C3}.Debug|x64.ActiveCfg = Debug
 		{334CC062-5031-42C3-A363-1E43F78BE4C3}.Debug|x64.Build.0 = Debug
 		{334CC062-5031-42C3-A363-1E43F78BE4C3}.Release|Any CPU.ActiveCfg = Release
 		{334CC062-5031-42C3-A363-1E43F78BE4C3}.Release|x64.ActiveCfg = Release
 		{334CC062-5031-42C3-A363-1E43F78BE4C3}.Release|x64.Build.0 = Release
+		{7791C941-3626-4C6E-9BB4-187BE9D6CCCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7791C941-3626-4C6E-9BB4-187BE9D6CCCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7791C941-3626-4C6E-9BB4-187BE9D6CCCA}.Debug|x64.ActiveCfg = Debug|x64
+		{7791C941-3626-4C6E-9BB4-187BE9D6CCCA}.Debug|x64.Build.0 = Debug|x64
+		{7791C941-3626-4C6E-9BB4-187BE9D6CCCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7791C941-3626-4C6E-9BB4-187BE9D6CCCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7791C941-3626-4C6E-9BB4-187BE9D6CCCA}.Release|x64.ActiveCfg = Release|x64
+		{7791C941-3626-4C6E-9BB4-187BE9D6CCCA}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,10 +12,12 @@ namespace METAR
 {
     public class Metar
     {
+        public static String ICAOAirportCode;
+
         public static String GetCurrentMetar()
         {
             HtmlAgilityPack.HtmlWeb web = new HtmlAgilityPack.HtmlWeb();
-            HtmlAgilityPack.HtmlDocument document = web.Load("https://aviationweather-cprk.ncep.noaa.gov/metar/data?ids=epkt&format=raw&date=&hours=0");
+            HtmlAgilityPack.HtmlDocument document = web.Load("https://aviationweather-cprk.ncep.noaa.gov/metar/data?ids=" + ICAOAirportCode+ "&format=raw&date=&hours=0");
 
             HtmlAgilityPack.HtmlNode t = document.DocumentNode.SelectSingleNode("//code");
 
