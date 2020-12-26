@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:METAR"
         mc:Ignorable="d"
-        Title="MainWindow" Height="28" Width="1920" ResizeMode="NoResize" ShowInTaskbar="False" WindowStyle="None" Topmost="True" Background="#FF101010">
+        Title="MainWindow" Height="28" Width="1920" ResizeMode="NoResize" ShowInTaskbar="False" WindowStyle="None" Topmost="True" Background="#FF007ACC">
     <Window.ContextMenu>
         <ContextMenu Name="ContextMenu">
-            <MenuItem Header="Download latest" Name="ContextMenuUpdate" Click="ContextMenuUpdate_Click" />
+            <!--MenuItem Header="Download latest" Name="ContextMenuUpdate" Click="ContextMenuUpdate_Click" /-->
             <MenuItem Header="Airport..." Name="ContextMenuAirport" Click="ContextMenuAirport_Click" />
             <Separator />
             <MenuItem Header="Options" Name="ContextMenuOptions" Click="ContextMenuOptions_Click" />
@@ -18,16 +18,17 @@
         </ContextMenu>
     </Window.ContextMenu>
 
-    <Grid>
+    <Grid x:Name="metarStripe">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Label x:Name="MetarText" Content="METAR Stripe: Connecting..." HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Foreground="#FFBFBFBF" Grid.Column="0" />
-        <Label x:Name="Status" Content="Status" HorizontalAlignment="Right" Margin="10,0,20,0" VerticalAlignment="Top" Foreground="#FFBFBFBF" Grid.Column="1" />
+        <Label x:Name="MetarText" Content="METAR Stripe: Connecting..." HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Foreground="White" Grid.Column="0" />
+        <Label x:Name="Status" Content="Status" HorizontalAlignment="Right" Margin="10,0,20,0" VerticalAlignment="Top" Foreground="White" Grid.Column="1" />
+        <Label x:Name="Loading" Content="↓" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" Visibility="Hidden"/>
 
     </Grid>
-    
+
 
 </Window>
 

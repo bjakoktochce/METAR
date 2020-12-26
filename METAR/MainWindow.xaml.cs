@@ -46,10 +46,15 @@ namespace METAR
             aTimer.Elapsed += OnTimedEvent;
         }
 
-        private void Update()
+        public void Update()
         {
-            this.MetarText.Content = Metar.GetCurrentMetar();
-            this.Status.Content = "Last updated: " + DateTime.Now.ToString();
+            ((MainWindow)Application.Current.MainWindow).Loading.Visibility = Visibility.Visible;
+           //this.MetarText.Content = Metar.GetCurrentMetar();
+           //this.Status.Content = "Last updated: " + DateTime.Now.ToString();
+           ((MainWindow)Application.Current.MainWindow).MetarText.Content = Metar.GetCurrentMetar();
+           ((MainWindow)Application.Current.MainWindow).Status.Content = "Last updated: " + DateTime.Now.ToString();
+           ((MainWindow)Application.Current.MainWindow).Loading.Visibility = Visibility.Hidden;
+
         }
 
         private void OnTimedEvent(Object source, ElapsedEventArgs e)
@@ -86,6 +91,8 @@ namespace METAR
         {
             AirportWindow airportWindow = new AirportWindow();
             airportWindow.Show();
+
+           
         }
     }
 }

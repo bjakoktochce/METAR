@@ -26,6 +26,8 @@ namespace METAR
         {
             Metar.ICAOAirportCode = this.AirportTextBox.Text;
             this.Close();
+            ((MainWindow)Application.Current.MainWindow).Update();
+            
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)

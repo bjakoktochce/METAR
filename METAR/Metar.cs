@@ -21,7 +21,7 @@ namespace METAR
 
             HtmlAgilityPack.HtmlNode t = document.DocumentNode.SelectSingleNode("//code");
 
-           
+            if (t == null) return "ERROR while downloading.";
 
             return t.InnerText;
 

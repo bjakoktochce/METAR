@@ -5,19 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:METAR"
         mc:Ignorable="d"
-        Title="Select Airport" Height="200" Width="400">
+        Title="Select Airport" Height="200" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="4*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="75px" />
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-
-        </Grid.ColumnDefinitions>
-        <Button Content="OK"  HorizontalAlignment="Right" Margin="0,0,200,17" VerticalAlignment="Bottom" Width="100" Click="Button_Click" Grid.RowSpan="2"/>
-        <Button x:Name="CancelButton" Content="Cancel"  HorizontalAlignment="Right" Margin="0,0,50,0" VerticalAlignment="Top" Width="100" Grid.Row="1" Click="CancelButton_Click"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="122,54,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="AirportTextBox"/>
+   
+        <Button Content="OK"  HorizontalAlignment="Left" Margin="75,0,0,0" VerticalAlignment="Center" Width="100" Click="Button_Click" Grid.Row="1"/>
+        <Button x:Name="CancelButton" Content="Cancel"  HorizontalAlignment="Left" Margin="225,0,0,0" VerticalAlignment="Center" Width="100" Grid.Row="1" Click="CancelButton_Click" Grid.ColumnSpan="2"/>
+        <Label Content="Enter airport ICAO code: " HorizontalAlignment="Left" Margin="75,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="1.064,0.541"/>
+        <TextBox HorizontalAlignment="Left" Margin="224,0,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Name="AirportTextBox" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
